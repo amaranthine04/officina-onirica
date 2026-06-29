@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactForm from '../../components/ContactForm.astro';
+---
+
+<BaseLayout
+  title="Percorsi per Adulti — Arte Terapia"
+  description="Percorsi di arte terapia per adulti a Cassano Magnago. Crescita personale, supporto al disagio, genitorialità, supervisione professionale."
+>
+
+  <!-- ─── HERO ──────────────────────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-salvia-chiaro/60">
+      <div class="flex h-full w-full items-center justify-center">
+        <p class="font-sans text-sm text-salvia/50">[PLACEHOLDER FOTO ADULTI]</p>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/70 to-transparent"></div>
+    <div class="relative mx-auto max-w-6xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
+      <p class="mb-3 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
+        Percorsi — Età adulta
+      </p>
+      <h1 class="font-display text-4xl font-semibold leading-tight text-bruno md:text-5xl lg:text-6xl">
+        Arte terapia per adulti
+      </h1>
+    </div>
+  </section>
+
+  <!-- ─── INTRO ─────────────────────────────────────────────────────────────── -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
+        <div>
+          <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">A chi si rivolge</p>
+          <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
+            Uno spazio per sé
+          </h2>
+          <div class="space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
+            <p>
+              Un percorso di arte terapia è efficace anche in <strong class="font-semibold text-bruno">età adulta</strong>:
+              come spazio espressivo e di crescita personale, o come supporto in
+              presenza di disagio emotivo o psicologico.
+            </p>
+            <p>
+              Non è necessario aver mai fatto arte prima. L'importante è la
+              disponibilità a mettersi in gioco attraverso il <strong class="font-semibold text-bruno">fare creativo</strong>,
+              che diventa strumento di esplorazione e trasformazione interiore.
+            </p>
+          </div>
+        </div>
+
+        <div class="aspect-[4/3] w-full bg-salvia-chiaro/50">
+          <div class="flex h-full w-full items-center justify-center">
+            <p class="font-sans text-xs text-salvia/50">[PLACEHOLDER FOTO]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PERCORSI SPECIFICI ────────────────────────────────────────────────── -->
+  <section class="bg-cipria/20 py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">I percorsi</p>
+      <h2 class="font-display mb-10 text-3xl font-semibold text-bruno md:text-4xl">
+        Cosa proponiamo
+      </h2>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+        {[
+          { titolo: 'Crescita personale', testo: 'Un percorso individuale di esplorazione di sé attraverso le arti visive, in un clima di ascolto e rispetto.' },
+          { titolo: 'Supporto al disagio', testo: 'Arte terapia come strumento di elaborazione in momenti di difficoltà emotiva, con approccio psicodinamico.' },
+          { titolo: 'Genitorialità', testo: 'Percorsi di sostegno alla genitorialità, per accompagnare le sfide del diventare e dell\'essere genitori.' },
+          { titolo: 'Mamma e bambino', testo: 'Percorsi dedicati al legame tra madre e figlio nel primo periodo di vita, attraverso l\'espressione condivisa.' },
+          { titolo: 'Formazione professionale', testo: 'Laboratori sulla creatività per educatori, insegnanti e professionisti che lavorano con le persone.' },
+          { titolo: 'Supervisione', testo: 'Supervisione individuale e di gruppo condotta da Alberto Ponti, docente e supervisore Art Therapy Italiana.' },
+        ].map(({ titolo, testo }) => (
+          <div class="pt-5">
+            <h3 class="font-display mb-2 text-xl font-semibold text-bruno">{titolo}</h3>
+            <p class="font-sans text-sm leading-relaxed text-bruno/65">{testo}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── AMBITO CLINICO ────────────────────────────────────────────────────── -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
+        <div class="aspect-[4/3] w-full bg-cipria/40 md:order-first">
+          <div class="flex h-full w-full items-center justify-center">
+            <p class="font-sans text-xs text-bruno/25">[PLACEHOLDER FOTO SESSIONE]</p>
+          </div>
+        </div>
+        <div>
+          <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Ambito clinico</p>
+          <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
+            Un approccio integrato
+          </h2>
+          <div class="space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
+            <p>
+              In ambito clinico, l'arte terapia si inserisce in un approccio
+              <strong class="font-semibold text-bruno">multidisciplinare integrato</strong> alla rete dei servizi territoriali
+              esistenti. Gli interventi permettono di affrontare, elaborare e
+              riequilibrare disarmonie e disagi psichici e/o fisici.
+            </p>
+            <p>
+              I fondamenti teorici del nostro lavoro affondano nelle
+              <strong class="font-semibold text-bruno">teorie psicodinamiche</strong> e negli sviluppi contemporanei delle
+              terapie espressive, in dialogo costante con la letteratura
+              scientifica internazionale.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FORM ──────────────────────────────────────────────────────────────── -->
+  <section class="bg-cipria/20 py-14 md:py-20">
+    <div class="mx-auto max-w-3xl px-6">
+      <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Contatti</p>
+      <h2 class="font-display mb-3 text-3xl font-semibold text-bruno md:text-4xl">
+        Chiedi informazioni
+      </h2>
+      <p class="mb-10 font-sans text-sm leading-relaxed text-bruno/65">
+        Hai domande su un percorso per te o per qualcuno che conosci? Scrivici:
+        ti risponderemo entro 48 ore.
+      </p>
+      <ContactForm subject="Percorso Adulti" />
+    </div>
+  </section>
+
+</BaseLayout>

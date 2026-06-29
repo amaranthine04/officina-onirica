@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactForm from '../../components/ContactForm.astro';
+---
+
+<BaseLayout
+  title="Arte Terapia per Bambini — Autostima e Comunicazione | Officina Onirica"
+  description="Percorsi di arte terapia per bambini e adolescenti a Cassano Magnago: sviluppo dell'autostima, delle capacità comunicative e immaginative. Individuali o di gruppo, per la prevenzione e la cura del disagio in età evolutiva."
+>
+
+  <!-- ─── HERO ──────────────────────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-cipria/60">
+      <div class="flex h-full w-full items-center justify-center">
+        <p class="font-sans text-sm text-bruno/25">[PLACEHOLDER FOTO BAMBINI]</p>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/70 to-transparent"></div>
+    <div class="relative mx-auto max-w-6xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
+      <p class="mb-3 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
+        Percorsi — Età evolutiva
+      </p>
+      <h1 class="font-display text-4xl font-semibold leading-tight text-bruno md:text-5xl lg:text-6xl">
+        Arte terapia per bambini e adolescenti
+      </h1>
+    </div>
+  </section>
+
+  <!-- ─── INTRO ─────────────────────────────────────────────────────────────── -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
+        <div>
+          <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">A chi si rivolge</p>
+          <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
+            Infanzia, preadolescenza e adolescenza
+          </h2>
+          <div class="space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
+            <p>
+              L'arte terapia è particolarmente indicata in <strong class="font-semibold text-bruno">età evolutiva</strong> perché offre
+              un canale di comunicazione complementare alle parole — uno spazio
+              in cui i bambini e i ragazzi possono esprimere ciò che a volte non
+              riescono ancora a dire.
+            </p>
+            <p>
+              I percorsi sono pensati sia per la <strong class="font-semibold text-bruno">prevenzione</strong> che per la
+              <strong class="font-semibold text-bruno">cura</strong>, e si adattano alle specificità di ogni fascia d'età:
+              dalla prima infanzia all'adolescenza.
+            </p>
+          </div>
+        </div>
+
+        <div class="aspect-[4/3] w-full bg-cipria/40">
+          <div class="flex h-full w-full items-center justify-center">
+            <p class="font-sans text-xs text-bruno/25">[PLACEHOLDER FOTO]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── OBIETTIVI ─────────────────────────────────────────────────────────── -->
+  <section class="bg-cipria/20 py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Obiettivi</p>
+      <h2 class="font-display mb-10 text-3xl font-semibold text-bruno md:text-4xl">
+        Cosa si lavora nei percorsi
+      </h2>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+        {[
+          { titolo: 'Autostima', testo: 'Rafforzare la fiducia in sé stessi e nel proprio potenziale espressivo.' },
+          { titolo: 'Immaginazione', testo: 'Stimolare la creatività come risorsa cognitiva ed emotiva.' },
+          { titolo: 'Comunicazione', testo: 'Sviluppare capacità comunicative anche al di fuori del linguaggio verbale.' },
+          { titolo: 'Consapevolezza di sé', testo: 'Aumentare la conoscenza del proprio mondo interiore ed emotivo.' },
+          { titolo: 'Relazione', testo: 'Migliorare le capacità relazionali con i pari e con gli adulti.' },
+          { titolo: 'Elaborazione', testo: 'Dare forma e senso a vissuti difficili attraverso il processo creativo.' },
+        ].map(({ titolo, testo }) => (
+          <div class="pt-5">
+            <h3 class="font-display mb-2 text-xl font-semibold text-bruno">{titolo}</h3>
+            <p class="font-sans text-sm leading-relaxed text-bruno/65">{testo}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── COME FUNZIONA ─────────────────────────────────────────────────────── -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
+        <div class="aspect-[4/3] w-full bg-salvia-chiaro/60 md:order-first">
+          <div class="flex h-full w-full items-center justify-center">
+            <p class="font-sans text-xs text-salvia/50">[PLACEHOLDER FOTO SESSIONE]</p>
+          </div>
+        </div>
+        <div>
+          <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Come funziona</p>
+          <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
+            Individuali o di gruppo
+          </h2>
+          <div class="space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
+            <p>
+              I percorsi si svolgono presso l'<strong class="font-semibold text-bruno">atelier di Officina Onirica</strong>
+              a Cassano Magnago, in sessioni individuali o di piccolo gruppo.
+            </p>
+            <p>
+              Ogni percorso inizia con un incontro conoscitivo con i genitori per
+              condividere la storia del bambino/ragazzo e definire insieme gli
+              obiettivi. Le sedute si svolgono poi con frequenza settimanale,
+              in uno spazio pensato per mettere a proprio agio.
+            </p>
+            <p>
+              I materiali utilizzati variano in base all'età e al percorso: pittura,
+              disegno, collage, modellazione, tecniche miste. <strong class="font-semibold text-bruno">Non è richiesta
+              alcuna competenza artistica</strong> — il processo conta più del risultato.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FORM ──────────────────────────────────────────────────────────────── -->
+  <section class="bg-cipria/20 py-14 md:py-20">
+    <div class="mx-auto max-w-3xl px-6">
+      <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Contatti</p>
+      <h2 class="font-display mb-3 text-3xl font-semibold text-bruno md:text-4xl">
+        Chiedi informazioni
+      </h2>
+      <p class="mb-10 font-sans text-sm leading-relaxed text-bruno/65">
+        Vuoi sapere se l'arte terapia è indicata per tuo figlio o per un ragazzo
+        che conosci? Scrivici: ti risponderemo entro 48 ore.
+      </p>
+      <ContactForm subject="Percorso Bambini" />
+    </div>
+  </section>
+
+</BaseLayout>

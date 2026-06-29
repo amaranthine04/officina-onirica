@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const facebookPageUrl = 'https://www.facebook.com/officinaonirica';
+---
+
+<BaseLayout
+  title="Bacheca — Officina Onirica"
+  description="Mostre, laboratori ed eventi aperti al pubblico di Officina Onirica. Aggiornamenti dalla nostra pagina Facebook."
+>
+
+  <!-- ─── HERO ──────────────────────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-cipria/40">
+      <div class="flex h-full w-full items-center justify-center">
+        <p class="font-sans text-sm text-bruno/25">[PLACEHOLDER FOTO]</p>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/70 to-transparent"></div>
+    <div class="relative mx-auto max-w-6xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
+      <p class="mb-3 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
+        Novità
+      </p>
+      <h1 class="font-display text-4xl font-semibold leading-tight text-bruno md:text-5xl lg:text-6xl">
+        Bacheca
+      </h1>
+    </div>
+  </section>
+
+  <!-- ─── INTRO ─────────────────────────────────────────────────────────────── -->
+  <section class="bg-cipria/20 py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="text-center">
+      <div class="space-y-2">
+        <p class="font-sans text-base leading-relaxed text-bruno/70 md:text-lg">
+          Qui trovi gli aggiornamenti su <strong class="font-semibold text-bruno">mostre, laboratori ed eventi</strong> aperti al pubblico.
+        </p>
+        <p class="font-sans text-base leading-relaxed text-bruno/70 md:text-lg">
+          Pubblichiamo regolarmente novità sulla nostra pagina <a href="https://www.facebook.com/officinaonirica" target="_blank" rel="noopener noreferrer" class="text-corallo underline decoration-corallo/40 underline-offset-2 transition-colors duration-200 hover:decoration-corallo">Facebook</a>: seguici per non perdere nessuna iniziativa.
+        </p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FEED FACEBOOK ─────────────────────────────────────────────────────── -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+
+      <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
+        La nostra pagina
+      </p>
+      <h2 class="font-display mb-10 text-3xl font-semibold leading-tight text-bruno md:text-4xl">
+        Ultime novità da Facebook
+      </h2>
+
+      <!-- Wrapper responsive per l'embed -->
+      <div class="flex flex-col items-center gap-8">
+
+        <!-- Facebook Page Plugin (Meta ufficiale) -->
+        <!-- Sostituite [URL PAGINA FACEBOOK] con l'URL effettivo prima del deploy -->
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous"
+          src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v19.0">
+        </script>
+
+        <div class="w-full overflow-hidden">
+          <div
+            class="fb-page"
+            data-href={facebookPageUrl}
+            data-tabs="timeline"
+            data-width=""
+            data-height="600"
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true"
+          >
+            <!-- Fallback se JavaScript non è disponibile o il plugin non carica -->
+            <blockquote cite={facebookPageUrl} class="fb-xfbml-parse-ignore">
+              <a href={facebookPageUrl}>Officina Onirica</a>
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- Nota: se l'embed non appare in preview locale è normale —
+             il Meta Page Plugin richiede un dominio pubblico verificato.
+             Funzionerà correttamente dopo il deploy su Netlify. -->
+
+        <a
+          href={facebookPageUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 bg-corallo px-8 py-3 font-sans text-sm font-semibold tracking-wide text-white transition-opacity duration-200 hover:opacity-85"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          Vai alla pagina Facebook
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

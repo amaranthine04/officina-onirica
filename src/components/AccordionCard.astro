@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  bgColor?: string;        // es. "bg-salvia-chiaro/50"
+  placeholderColor?: string; // es. "bg-salvia-chiaro"
+}
+
+const {
+  title,
+  description,
+  bgColor = 'bg-salvia-chiaro/50',
+  placeholderColor = 'bg-salvia-chiaro',
+} = Astro.props;
+---
+
+<details class={`group accordion-card ${bgColor}`}>
+  <summary class="flex cursor-pointer list-none flex-col items-start gap-0 focus-visible:outline-2 focus-visible:outline-corallo">
+    <!-- Placeholder foto -->
+    <div class={`aspect-[4/3] w-full overflow-hidden ${placeholderColor}`}>
+      <div class="flex h-full w-full items-center justify-center">
+        <p class="font-sans text-xs text-salvia/50">[foto {title.toLowerCase()}]</p>
+      </div>
+    </div>
+    <!-- Titolo + chevron -->
+    <div class="flex w-full items-center justify-between px-6 py-5">
+      <h3 class="font-display text-3xl font-semibold text-bruno">{title}</h3>
+      <svg
+        class="h-4 w-4 flex-shrink-0 text-corallo transition-transform duration-300 group-open:rotate-180"
+        viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+        aria-hidden="true"
+      >
+        <path d="M2 4l4 4 4-4"/>
+      </svg>
+    </div>
+  </summary>
+
+  <!-- Descrizione espandibile -->
+  <div class="overflow-hidden px-6 pb-7 pt-0">
+    <p class="font-sans text-sm leading-relaxed text-bruno/70">{description}</p>
+  </div>
+</details>

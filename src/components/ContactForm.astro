@@ -1,0 +1,106 @@
+---
+interface Props {
+  subject?: string; // pre-compilato nell'oggetto email
+}
+const { subject = '' } = Astro.props;
+---
+
+<form
+  name="contatto"
+  method="POST"
+  action="/contatti/grazie"
+  data-netlify="true"
+  class="space-y-6"
+>
+  <input type="hidden" name="form-name" value="contatto" />
+  {subject && <input type="hidden" name="oggetto" value={subject} />}
+
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+    <div>
+      <label class="mb-1.5 block font-sans text-xs font-medium uppercase tracking-[0.15em] text-bruno/60">
+        Nome *
+      </label>
+      <input
+        type="text"
+        name="nome"
+        required
+        class="w-full border border-bruno/20 bg-white px-4 py-3 font-sans text-sm text-bruno placeholder:text-bruno/30 focus:border-corallo focus:outline-none"
+        placeholder="Il tuo nome"
+      />
+    </div>
+    <div>
+      <label class="mb-1.5 block font-sans text-xs font-medium uppercase tracking-[0.15em] text-bruno/60">
+        Cognome *
+      </label>
+      <input
+        type="text"
+        name="cognome"
+        required
+        class="w-full border border-bruno/20 bg-white px-4 py-3 font-sans text-sm text-bruno placeholder:text-bruno/30 focus:border-corallo focus:outline-none"
+        placeholder="Il tuo cognome"
+      />
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+    <div>
+      <label class="mb-1.5 block font-sans text-xs font-medium uppercase tracking-[0.15em] text-bruno/60">
+        Email *
+      </label>
+      <input
+        type="email"
+        name="email"
+        required
+        class="w-full border border-bruno/20 bg-white px-4 py-3 font-sans text-sm text-bruno placeholder:text-bruno/30 focus:border-corallo focus:outline-none"
+        placeholder="nome@email.it"
+      />
+    </div>
+    <div>
+      <label class="mb-1.5 block font-sans text-xs font-medium uppercase tracking-[0.15em] text-bruno/60">
+        Telefono
+      </label>
+      <input
+        type="tel"
+        name="telefono"
+        class="w-full border border-bruno/20 bg-white px-4 py-3 font-sans text-sm text-bruno placeholder:text-bruno/30 focus:border-corallo focus:outline-none"
+        placeholder="+39 000 000 0000"
+      />
+    </div>
+  </div>
+
+  <div>
+    <label class="mb-1.5 block font-sans text-xs font-medium uppercase tracking-[0.15em] text-bruno/60">
+      Messaggio
+    </label>
+    <textarea
+      name="messaggio"
+      rows="5"
+      class="w-full border border-bruno/20 bg-white px-4 py-3 font-sans text-sm text-bruno placeholder:text-bruno/30 focus:border-corallo focus:outline-none"
+      placeholder="Raccontaci brevemente la tua situazione o la tua richiesta…"
+    ></textarea>
+  </div>
+
+  <div class="flex items-start gap-3">
+    <input
+      type="checkbox"
+      name="privacy"
+      id="privacy"
+      required
+      class="mt-1 h-4 w-4 shrink-0 cursor-pointer border border-bruno/30 accent-corallo"
+    />
+    <label for="privacy" class="font-sans text-xs leading-relaxed text-bruno/55">
+      Ho letto e accetto il trattamento dei miei dati personali ai sensi del Regolamento UE 2016/679 (GDPR). *
+    </label>
+  </div>
+
+  <p class="font-sans text-xs text-bruno/40">
+    * campi obbligatori.
+  </p>
+
+  <button
+    type="submit"
+    class="inline-block bg-corallo px-8 py-3 font-sans text-sm font-semibold tracking-wide text-white transition-opacity duration-200 hover:opacity-85"
+  >
+    Invia la richiesta
+  </button>
+</form>

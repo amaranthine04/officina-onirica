@@ -1,0 +1,212 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Officina Onirica — Studio di Arte Terapia a Cassano Magnago"
+  description="Officina Onirica è uno studio di arte terapia a Cassano Magnago. Percorsi individuali e di gruppo per bambini, adulti e anziani."
+>
+
+  <!-- ─── 1. HERO ───────────────────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-salvia-chiaro">
+      <!-- Sostituire con: <img src="/hero.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" /> -->
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/70 to-transparent"></div>
+
+    <div class="relative mx-auto w-full max-w-6xl px-6 pb-48 pt-20 md:pb-64 md:pt-28">
+      <p class="mb-3 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
+        Studio di arte e terapia
+      </p>
+      <h1 class="font-display mb-4 text-4xl font-semibold leading-[1.1] tracking-tight text-bruno md:text-5xl lg:text-6xl">
+        Un luogo dove l'arte diventa cura
+      </h1>
+      <p class="mb-7 max-w-xl font-sans text-base leading-relaxed text-bruno/70">
+        Officina Onirica offre percorsi di <strong class="font-semibold text-bruno">arte terapia</strong> per bambini, adulti
+        e anziani, <strong class="font-semibold text-bruno">individuali e di gruppo</strong>, nel rispetto di ogni storia
+        e di ogni tempo interiore.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a
+          href="/percorsi"
+          class="inline-block bg-corallo px-6 py-3 font-sans text-sm font-semibold tracking-wide text-white transition-opacity duration-200 hover:opacity-85"
+        >
+          Scopri i percorsi
+        </a>
+        <a
+          href="/contatti"
+          class="inline-block border border-bruno/30 px-6 py-3 font-sans text-sm font-semibold tracking-wide text-bruno/80 transition-colors duration-200 hover:border-bruno/60 hover:text-bruno"
+        >
+          Scrivici
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 2. ARTE TERAPIA ──────────────────────────────────────────────────── -->
+  <section class="bg-cipria/30 py-16 md:py-24">
+    <div class="mx-auto max-w-5xl px-6 text-center">
+      <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
+        A cosa serve e a chi si rivolge?
+      </p>
+      <h2 class="font-display mb-6 text-4xl font-semibold leading-tight text-bruno md:text-5xl">
+        Arte terapia
+      </h2>
+      <div class="space-y-4 font-sans text-base leading-relaxed text-bruno/70 md:text-lg">
+        <p>
+          L'arte terapia si rivolge a persone di ogni età, dai bambini agli anziani,
+          che vogliono sviluppare creatività, <strong class="font-semibold text-bruno">consapevolezza e capacità espressive</strong>.
+          Gli interventi di arte terapia consentono di affrontare, elaborare e
+          riequilibrare disarmonie, disagi psichici e/o fisici, nonché <strong class="font-semibold text-bruno">sciogliere blocchi</strong>.
+        </p>
+        <p>
+          I nostri metodi affondano le radici nelle <strong class="font-semibold text-bruno">teorie psicodinamiche</strong> e negli
+          sviluppi contemporanei delle terapie espressive, una tradizione nata negli
+          anni '40, con una crescente documentazione scientifica internazionale a
+          sostegno della sua efficacia.
+        </p>
+      </div>
+      <a
+        href="/cos-e-arte-terapia"
+        class="mt-7 inline-block border-b border-corallo pb-0.5 font-sans text-sm text-corallo transition-all duration-200 hover:pb-1"
+      >
+        Scopri di più sull'arte terapia →
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── 3. ATELIER ───────────────────────────────────────────────────────── -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+
+      <!-- Intro -->
+      <div class="mb-10">
+        <h2 class="font-display mb-3 text-4xl font-semibold leading-tight text-bruno md:text-5xl">
+          Il nostro atelier
+        </h2>
+        <p class="font-sans text-sm leading-relaxed text-bruno/65">
+          Lavoriamo con bambini, adulti e anziani, in sessioni individuali o in gruppo, adattando il percorso alle specificità di ciascuno. <strong class="font-semibold text-bruno">L'atelier è uno spazio sicuro in cui ogni segno ha valore.</strong>
+        </p>
+      </div>
+
+      <!-- Due card -->
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <a href="/percorsi" class="flex flex-col bg-salvia-chiaro/50 transition-opacity duration-200 hover:opacity-90">
+          <div class="aspect-[4/3] w-full overflow-hidden bg-salvia-chiaro">
+            <div class="flex h-full w-full items-center justify-center">
+              <p class="font-sans text-sm text-salvia/60">[PLACEHOLDER FOTO PERCORSI]</p>
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="font-display mb-2 text-3xl font-semibold text-bruno">Percorsi</h3>
+            <p class="mb-6 flex-1 font-sans text-sm leading-relaxed text-bruno/65">
+              Per bambini, adulti e anziani, permettono di dar forma espressiva ai
+              contenuti del complesso universo interno unico in ciascuno, attraverso
+              le molteplici forme artistiche.
+            </p>
+            <span class="inline-block self-start border-b border-corallo pb-0.5 font-sans text-sm font-semibold text-corallo">
+              Scopri i percorsi →
+            </span>
+          </div>
+        </a>
+
+        <a href="/gruppi" class="flex flex-col bg-cipria/30 transition-opacity duration-200 hover:opacity-90">
+          <div class="aspect-[4/3] w-full overflow-hidden bg-cipria/60">
+            <div class="flex h-full w-full items-center justify-center">
+              <p class="font-sans text-sm text-bruno/30">[PLACEHOLDER FOTO GRUPPI]</p>
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="font-display mb-2 text-3xl font-semibold text-bruno">Gruppi</h3>
+            <p class="mb-6 flex-1 font-sans text-sm leading-relaxed text-bruno/65">
+              Gruppi di arte terapia per ragazzi con sindrome di Down e persone con
+              Parkinson, in collaborazione con le associazioni del territorio. Uno
+              spazio di espressione condivisa.
+            </p>
+            <span class="inline-block self-start border-b border-corallo pb-0.5 font-sans text-sm font-semibold text-corallo">
+              Scopri i gruppi →
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Mini-galleria -->
+      <div class="mt-12">
+        <div class="mb-4 flex items-end justify-between">
+          <h3 class="font-display text-2xl font-semibold text-bruno">Dalla galleria</h3>
+          <a href="/dentro-atelier#galleria" class="border-b border-corallo pb-0.5 font-sans text-sm text-corallo transition-all duration-200 hover:pb-1">
+            Vai alla galleria →
+          </a>
+        </div>
+        <div class="grid grid-cols-3 gap-3 md:grid-cols-4">
+          {[1,2,3,4].map(i => (
+            <div class="aspect-square bg-salvia-chiaro/70">
+              <div class="flex h-full w-full items-center justify-center">
+                <p class="font-sans text-xs text-salvia/50">[foto {i}]</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── 4. CHI SIAMO + SCRIVICI ─────────────────────────────────────────── -->
+  <section class="overflow-hidden bg-cipria/20 py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6 text-center">
+
+      <h2 class="font-display mb-3 text-4xl font-semibold leading-tight text-bruno md:text-5xl">
+        Chi siamo
+      </h2>
+      <p class="mb-12 font-sans text-sm leading-relaxed text-bruno/65">
+        Siamo <strong class="font-semibold text-bruno">Laura e Alberto</strong>, gli <strong class="font-semibold text-bruno">Arte Terapeuti</strong> di <strong class="font-semibold text-bruno">Officina Onirica</strong>.
+      </p>
+
+      <!-- Foto sfalsate, centrate -->
+      <div class="mb-14 flex items-end justify-center gap-8 md:gap-14">
+
+        <!-- Alberto — base -->
+        <a href="/dentro-atelier#alberto" class="flex flex-col items-center gap-3 transition-opacity duration-200 hover:opacity-75">
+          <div class="h-48 w-48 overflow-hidden rounded-full bg-salvia/30 md:h-56 md:w-56">
+            <div class="flex h-full w-full items-center justify-center">
+              <span class="font-sans text-sm text-salvia/50">AP</span>
+            </div>
+          </div>
+          <p class="font-sans text-sm font-bold text-bruno">Alberto Ponti</p>
+          <p class="font-sans text-xs text-bruno/50">Arte Terapeuta</p>
+        </a>
+
+        <!-- Laura — sollevata -->
+        <a href="/dentro-atelier#laura" class="mb-12 flex flex-col items-center gap-3 transition-opacity duration-200 hover:opacity-75">
+          <div class="h-48 w-48 overflow-hidden rounded-full bg-cipria/70 md:h-56 md:w-56">
+            <div class="flex h-full w-full items-center justify-center">
+              <span class="font-sans text-sm text-bruno/35">LS</span>
+            </div>
+          </div>
+          <p class="font-sans text-sm font-bold text-bruno">Laura Saporiti</p>
+          <p class="font-sans text-xs text-bruno/50">Arte Terapeuta</p>
+        </a>
+
+      </div>
+
+      <!-- CTA centrate, una sotto l'altra -->
+      <div class="flex flex-col items-center gap-5">
+        <a
+          href="/dentro-atelier"
+          class="border-b border-corallo pb-0.5 font-sans text-sm text-corallo transition-all duration-200 hover:pb-1"
+        >
+          Scopri chi siamo →
+        </a>
+        <a
+          href="/contatti"
+          class="inline-block bg-corallo px-6 py-3 font-sans text-sm font-semibold tracking-wide text-white transition-opacity duration-200 hover:opacity-85"
+        >
+          Scrivici
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,185 @@
+---
+const navLinks = [
+  {
+    label: "Dentro l'Atelier",
+    href: '/dentro-atelier',
+    dropdown: [
+      { label: 'Chi siamo',  href: '/dentro-atelier#chi-siamo' },
+      { label: "L'Atelier",  href: '/dentro-atelier#atelier'   },
+    ],
+  },
+  {
+    label: 'Cosa facciamo',
+    href: '/cosa-facciamo',
+    dropdown: [
+      { label: 'Percorsi', href: '/percorsi' },
+      { label: 'Gruppi',   href: '/gruppi'   },
+    ],
+  },
+  { label: 'Bacheca',   href: '/bacheca',   dropdown: null },
+  { label: 'Contatti',  href: '/contatti',  dropdown: null },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="relative z-50 w-full bg-white">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-1 md:py-1.5">
+
+    <!-- Logo -->
+    <a href="/" aria-label="Officina Onirica — torna alla home">
+      <img src="/logo.jpg" alt="Officina Onirica" class="h-16 w-auto md:h-20" />
+    </a>
+
+    <!-- Nav desktop -->
+    <nav class="hidden items-center gap-8 md:flex" aria-label="Navigazione principale">
+      {navLinks.map(({ label, href, dropdown }) => (
+        dropdown
+          ? (
+            <div class="group relative">
+              <a
+                href={href}
+                class:list={[
+                  'relative flex items-center gap-1 font-sans text-sm tracking-wide transition-colors duration-200',
+                  'after:absolute after:-bottom-0.5 after:left-0 after:h-px after:bg-corallo after:transition-all after:duration-300',
+                  currentPath.startsWith(href)
+                    ? 'text-corallo after:w-full'
+                    : 'text-bruno/70 hover:text-bruno after:w-0 hover:after:w-full',
+                ]}
+              >
+                {label}
+                <svg class="mt-px h-3 w-3 transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                  <path d="M2 4l4 4 4-4"/>
+                </svg>
+              </a>
+              <!-- Dropdown -->
+              <div class="pointer-events-none absolute left-0 top-full pt-3 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
+                <ul class="min-w-[160px] border border-bruno/10 bg-white py-2">
+                  {dropdown.map(({ label: dlabel, href: dhref }) => (
+                    <li>
+                      <a
+                        href={dhref}
+                        class:list={[
+                          'block px-5 py-2.5 font-sans text-sm transition-colors duration-150',
+                          currentPath.startsWith(dhref)
+                            ? 'text-corallo'
+                            : 'text-bruno/70 hover:bg-cipria/30 hover:text-bruno',
+                        ]}
+                      >
+                        {dlabel}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )
+          : (
+            <a
+              href={href}
+              class:list={[
+                'relative font-sans text-sm tracking-wide transition-colors duration-200',
+                'after:absolute after:-bottom-0.5 after:left-0 after:h-px after:bg-corallo after:transition-all after:duration-300',
+                currentPath === href
+                  ? 'text-corallo after:w-full'
+                  : 'text-bruno/70 hover:text-bruno after:w-0 hover:after:w-full',
+              ]}
+            >
+              {label}
+            </a>
+          )
+      ))}
+    </nav>
+
+    <!-- Hamburger (mobile) -->
+    <button
+      id="menu-toggle"
+      class="flex flex-col items-end gap-1.5 p-1 md:hidden"
+      aria-label="Apri menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="hamburger-line block h-px w-6 bg-bruno transition-all duration-300"></span>
+      <span class="hamburger-line block h-px w-4 bg-bruno transition-all duration-300"></span>
+      <span class="hamburger-line block h-px w-5 bg-bruno transition-all duration-300"></span>
+    </button>
+  </div>
+
+  <!-- Menu mobile -->
+  <div
+    id="mobile-menu"
+    class="overflow-hidden md:hidden"
+    style="max-height: 0; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);"
+    aria-hidden="true"
+  >
+    <nav class="border-t border-bruno/10 px-6 pb-8 pt-6" aria-label="Navigazione mobile">
+      {navLinks.map(({ label, href, dropdown }) => (
+        <div>
+          <a
+            href={href}
+            class:list={[
+              'block border-b border-bruno/8 py-4 font-display text-2xl font-semibold transition-colors duration-200',
+              currentPath.startsWith(href) ? 'text-corallo' : 'text-bruno hover:text-corallo',
+            ]}
+          >
+            {label}
+          </a>
+          {dropdown && (
+            <div class="mb-2 flex flex-col gap-1 pl-4">
+              {dropdown.map(({ label: dlabel, href: dhref }) => (
+                <a
+                  href={dhref}
+                  class:list={[
+                    'py-2 font-sans text-sm transition-colors duration-150',
+                    currentPath.startsWith(dhref) ? 'text-corallo' : 'text-bruno/60 hover:text-corallo',
+                  ]}
+                >
+                  {dlabel}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle')!;
+  const menu   = document.getElementById('mobile-menu')!;
+  const lines  = toggle.querySelectorAll<HTMLElement>('.hamburger-line');
+  let open = false;
+
+  toggle.addEventListener('click', () => {
+    open = !open;
+    toggle.setAttribute('aria-expanded', String(open));
+    menu.setAttribute('aria-hidden', String(!open));
+    if (open) {
+      menu.style.maxHeight = menu.scrollHeight + 'px';
+      lines[0].style.transform = 'translateY(9px) rotate(45deg)';
+      lines[1].style.opacity   = '0';
+      lines[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+      lines[2].style.width     = '24px';
+    } else {
+      menu.style.maxHeight = '0';
+      lines[0].style.transform = '';
+      lines[1].style.opacity   = '1';
+      lines[2].style.transform = '';
+      lines[2].style.width     = '';
+    }
+  });
+
+  menu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      if (!open) return;
+      open = false;
+      toggle.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-hidden', 'true');
+      menu.style.maxHeight = '0';
+      lines[0].style.transform = '';
+      lines[1].style.opacity   = '1';
+      lines[2].style.transform = '';
+    });
+  });
+</script>

@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const percorsi = [
+  {
+    title: 'Bambini',
+    excerpt: "Percorsi individuali o di gruppo in età evolutiva, per far crescere autostima, immaginazione e capacità comunicative.",
+    href: '/percorsi/bambini',
+    bg: 'bg-cipria/20',
+    photoBg: 'bg-cipria/50',
+  },
+  {
+    title: 'Adulti',
+    excerpt: "Spazio espressivo e di crescita personale, o supporto in presenza di disagio. Anche percorsi mamma-bambino e supervisione.",
+    href: '/percorsi/adulti',
+    bg: 'bg-salvia-chiaro/40',
+    photoBg: 'bg-salvia-chiaro',
+  },
+  {
+    title: 'Anziani',
+    excerpt: "Arte terapia per la terza età, per mantenere attivo il processo creativo o come supporto in presenza di patologie degenerative.",
+    href: '/percorsi/anziani',
+    bg: 'bg-cipria/20',
+    photoBg: 'bg-cipria/50',
+  },
+];
+---
+
+<BaseLayout
+  title="Percorsi di Arte Terapia — Officina Onirica"
+  description="Percorsi di arte terapia individuali e di gruppo per bambini, adulti e anziani. Officina Onirica, Cassano Magnago."
+>
+
+  <!-- ─── HERO ──────────────────────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-salvia-chiaro/60">
+      <div class="flex h-full w-full items-center justify-center">
+        <p class="font-sans text-sm text-salvia/50">[PLACEHOLDER FOTO]</p>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/70 to-transparent"></div>
+    <div class="relative mx-auto max-w-6xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
+      <p class="mb-3 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
+        Cosa facciamo
+      </p>
+      <h1 class="font-display text-4xl font-semibold leading-tight text-bruno md:text-5xl lg:text-6xl">
+        Percorsi di arte terapia
+      </h1>
+    </div>
+  </section>
+
+  <!-- ─── LISTA ─────────────────────────────────────────────────────────────── -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mb-14 space-y-4 text-center">
+        <p class="font-sans text-base leading-relaxed text-bruno/70 md:text-lg">
+          <strong class="font-semibold text-bruno">Percorsi individuali e di gruppo</strong>, pensati per ogni fase della vita.
+        </p>
+        <p class="font-sans text-base leading-relaxed text-bruno/70 md:text-lg">
+          Ogni persona porta con sé un modo unico di esprimersi: il nostro compito è <strong class="font-semibold text-bruno">creare lo spazio perché possa emergere</strong>, qualunque sia l'età o il momento che si sta vivendo.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        {percorsi.map(p => (
+          <div class={`flex flex-col ${p.bg}`}>
+            <a href={p.href} class={`block aspect-[4/3] w-full overflow-hidden ${p.photoBg} transition-opacity duration-200 hover:opacity-85`}>
+              <div class="flex h-full w-full items-center justify-center">
+                <p class="font-sans text-xs text-bruno/30">[foto {p.title.toLowerCase()}]</p>
+              </div>
+            </a>
+            <div class="flex flex-1 flex-col p-6">
+              <h2 class="font-display mb-3 text-3xl font-semibold text-bruno">{p.title}</h2>
+              <p class="mb-6 flex-1 font-sans text-sm leading-relaxed text-bruno/65">{p.excerpt}</p>
+              <a href={p.href} class="inline-block self-start border-b border-corallo pb-0.5 font-sans text-sm font-semibold text-corallo transition-all duration-200 hover:pb-1">
+                Scopri di più →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

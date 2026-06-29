@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactForm from '../../components/ContactForm.astro';
+---
+
+<BaseLayout
+  title="Percorsi per Anziani — Arte Terapia"
+  description="Arte terapia per la terza età a Cassano Magnago. Percorsi individuali e di gruppo, anche presso RSA, per mantenere vivo il processo creativo."
+>
+
+  <!-- ─── HERO ──────────────────────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-salvia-chiaro/60">
+      <div class="flex h-full w-full items-center justify-center">
+        <p class="font-sans text-sm text-salvia/50">[PLACEHOLDER FOTO ANZIANI]</p>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/70 to-transparent"></div>
+    <div class="relative mx-auto max-w-6xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
+      <p class="mb-3 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
+        Percorsi — Terza età
+      </p>
+      <h1 class="font-display text-4xl font-semibold leading-tight text-bruno md:text-5xl lg:text-6xl">
+        Arte terapia per la terza età
+      </h1>
+    </div>
+  </section>
+
+  <!-- ─── INTRO ─────────────────────────────────────────────────────────────── -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
+        <div>
+          <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">A chi si rivolge</p>
+          <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
+            La creatività non ha età
+          </h2>
+          <div class="space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
+            <p>
+              L'arte terapia accompagna anche la <strong class="font-semibold text-bruno">terza età</strong>, mantenendo
+              attivo il processo creativo o offrendo supporto in presenza di
+              patologie degenerative come Alzheimer e Parkinson.
+            </p>
+            <p>
+              Il lavoro si fonda sulle <strong class="font-semibold text-bruno">risorse residue</strong> di ciascuno:
+              non si parte dalle mancanze, ma da ciò che è ancora vivo e presente.
+              Il fare creativo diventa uno spazio di dignità, espressione e incontro.
+            </p>
+          </div>
+        </div>
+
+        <div class="aspect-[4/3] w-full bg-salvia-chiaro/50">
+          <div class="flex h-full w-full items-center justify-center">
+            <p class="font-sans text-xs text-salvia/50">[PLACEHOLDER FOTO]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── OBIETTIVI ─────────────────────────────────────────────────────────── -->
+  <section class="bg-cipria/20 py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Obiettivi</p>
+      <h2 class="font-display mb-10 text-3xl font-semibold text-bruno md:text-4xl">
+        Cosa si lavora nei percorsi
+      </h2>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+        {[
+          { titolo: 'Processo creativo', testo: 'Mantenere viva la dimensione immaginativa come risorsa vitale in ogni fase della vita.' },
+          { titolo: 'Benessere emotivo', testo: 'Offrire uno spazio di espressione in grado di ridurre ansia, isolamento e senso di perdita.' },
+          { titolo: 'Memoria e identità', testo: 'Stimolare la memoria autobiografica e il senso di continuità del sé attraverso la creazione.' },
+          { titolo: 'Socialità', testo: 'Favorire la relazione e il senso di appartenenza attraverso il lavoro in gruppo.' },
+          { titolo: 'Autonomia espressiva', testo: 'Valorizzare le capacità residue e sostenere la fiducia nelle proprie risorse.' },
+          { titolo: 'Supporto alle famiglie', testo: 'Accompagnare anche i familiari nel riconoscere e valorizzare l\'espressività del loro caro.' },
+        ].map(({ titolo, testo }) => (
+          <div class="pt-5">
+            <h3 class="font-display mb-2 text-xl font-semibold text-bruno">{titolo}</h3>
+            <p class="font-sans text-sm leading-relaxed text-bruno/65">{testo}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── DOVE SI SVOLGE ────────────────────────────────────────────────────── -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
+        <div class="aspect-[4/3] w-full bg-cipria/40 md:order-first">
+          <div class="flex h-full w-full items-center justify-center">
+            <p class="font-sans text-xs text-bruno/25">[PLACEHOLDER FOTO SESSIONE]</p>
+          </div>
+        </div>
+        <div>
+          <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Dove si svolge</p>
+          <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
+            In atelier e sul territorio
+          </h2>
+          <div class="space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
+            <p>
+              Gli interventi si svolgono prevalentemente <strong class="font-semibold text-bruno">in gruppo</strong>, presso
+              l'atelier di Officina Onirica a Cassano Magnago o direttamente
+              <strong class="font-semibold text-bruno">presso le RSA del territorio</strong>.
+            </p>
+            <p>
+              È possibile anche attivare percorsi individuali su richiesta,
+              concordando modalità e frequenza in base alle esigenze
+              della persona e del contesto.
+            </p>
+            <p>
+              Per attivare un percorso in una struttura o comunità, contattaci
+              per definire insieme un progetto su misura.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FORM ──────────────────────────────────────────────────────────────── -->
+  <section class="bg-cipria/20 py-14 md:py-20">
+    <div class="mx-auto max-w-3xl px-6">
+      <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Contatti</p>
+      <h2 class="font-display mb-3 text-3xl font-semibold text-bruno md:text-4xl">
+        Chiedi informazioni
+      </h2>
+      <p class="mb-10 font-sans text-sm leading-relaxed text-bruno/65">
+        Stai cercando un percorso per un genitore, un nonno o per una struttura?
+        Scrivici: ti risponderemo entro 48 ore.
+      </p>
+      <ContactForm subject="Percorso Anziani" />
+    </div>
+  </section>
+
+</BaseLayout>

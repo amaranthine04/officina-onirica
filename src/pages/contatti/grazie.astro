@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Grazie"
+  description="Messaggio inviato correttamente. Ti risponderemo al più presto."
+  noindex={true}
+>
+  <section class="flex min-h-[60vh] items-center py-20">
+    <div class="mx-auto max-w-2xl px-6 text-center">
+      <p class="mb-4 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
+        Messaggio inviato
+      </p>
+      <h1 class="font-display mb-6 text-4xl font-semibold leading-tight text-bruno md:text-5xl">
+        Grazie!
+      </h1>
+      <p class="mb-10 font-sans text-base leading-relaxed text-bruno/70">
+        Abbiamo ricevuto il tuo messaggio e ti risponderemo il prima possibile.
+      </p>
+      <a
+        href="/"
+        class="inline-block border-b border-corallo pb-0.5 font-sans text-sm font-semibold text-corallo transition-all duration-200 hover:pb-1"
+      >
+        ← Torna alla home
+      </a>
+    </div>
+  </section>
+</BaseLayout>

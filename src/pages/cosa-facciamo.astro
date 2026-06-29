@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Cosa facciamo — Officina Onirica"
+  description="Officina Onirica propone percorsi di arte terapia individuali e di gruppo per ogni fase della vita, e gruppi in collaborazione con le associazioni del territorio."
+>
+
+  <!-- ─── HERO ──────────────────────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-salvia-chiaro/60">
+      <div class="flex h-full w-full items-center justify-center">
+        <p class="font-sans text-sm text-salvia/50">[PLACEHOLDER FOTO]</p>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/70 to-transparent"></div>
+    <div class="relative mx-auto max-w-6xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
+      <p class="mb-3 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
+        Cosa facciamo
+      </p>
+      <h1 class="font-display text-4xl font-semibold leading-tight text-bruno md:text-5xl lg:text-6xl">
+        Percorsi e gruppi
+      </h1>
+    </div>
+  </section>
+
+  <!-- ─── INTRO + CARD ──────────────────────────────────────────────────────── -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+
+      <p class="mb-12 text-center font-sans text-base leading-relaxed text-bruno/70 md:text-lg">
+        Proponiamo <strong class="font-semibold text-bruno">percorsi individuali e di gruppo</strong> per bambini, adulti e anziani,
+        e <strong class="font-semibold text-bruno">gruppi specifici</strong> in collaborazione con le associazioni del territorio.
+        Ogni intervento è pensato per rispettare i tempi e la storia di ciascuno.
+      </p>
+
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+
+        <!-- Percorsi -->
+        <a href="/percorsi" class="flex flex-col bg-cipria/20 transition-opacity duration-200 hover:opacity-90">
+          <div class="aspect-[4/3] w-full bg-cipria/50">
+            <div class="flex h-full w-full items-center justify-center">
+              <p class="font-sans text-xs text-bruno/30">[PLACEHOLDER FOTO PERCORSI]</p>
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col p-8">
+            <h2 class="font-display mb-3 text-3xl font-semibold text-bruno">Percorsi</h2>
+            <p class="mb-8 flex-1 font-sans text-sm leading-relaxed text-bruno/65">
+              Percorsi individuali e di gruppo per bambini, adulti e anziani.
+            </p>
+            <span class="inline-block self-start border-b border-corallo pb-0.5 font-sans text-sm font-semibold text-corallo">
+              Scopri di più →
+            </span>
+          </div>
+        </a>
+
+        <!-- Gruppi -->
+        <a href="/gruppi" class="flex flex-col bg-salvia-chiaro/50 transition-opacity duration-200 hover:opacity-90">
+          <div class="aspect-[4/3] w-full bg-salvia-chiaro">
+            <div class="flex h-full w-full items-center justify-center">
+              <p class="font-sans text-xs text-salvia/50">[PLACEHOLDER FOTO GRUPPI]</p>
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col p-8">
+            <h2 class="font-display mb-3 text-3xl font-semibold text-bruno">Gruppi</h2>
+            <p class="mb-8 flex-1 font-sans text-sm leading-relaxed text-bruno/65">
+              Gruppi in collaborazione con le associazioni del territorio.
+            </p>
+            <span class="inline-block self-start border-b border-corallo pb-0.5 font-sans text-sm font-semibond text-corallo">
+              Scopri di più →
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

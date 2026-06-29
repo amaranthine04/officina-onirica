@@ -1,0 +1,111 @@
+---
+const navLinks = [
+  { label: "Dentro l'Atelier", href: '/dentro-atelier'           },
+  { label: 'Cosa facciamo',    href: '/cosa-facciamo'            },
+  { label: '↳ Percorsi',      href: '/percorsi'   },
+  { label: '↳ Gruppi',        href: '/gruppi'     },
+  { label: 'Bacheca',          href: '/bacheca'    },
+  { label: 'Contatti',         href: '/contatti'                 },
+];
+---
+
+<footer class="border-t border-bruno/10 bg-white">
+  <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
+
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-3 lg:grid-cols-4">
+
+      <!-- Brand + social -->
+      <div class="lg:col-span-1">
+        <a href="/" aria-label="Officina Onirica — home">
+          <img src="/logo.jpg" alt="Officina Onirica" class="mb-6 h-20 w-auto md:h-24" />
+        </a>
+        <a
+          href="https://www.facebook.com/officinaonirica"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 font-sans text-sm text-corallo transition-colors duration-200 hover:text-bruno"
+          aria-label="Segui Officina Onirica su Facebook"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          Segui i nostri eventi su Facebook
+        </a>
+      </div>
+
+      <!-- Navigazione -->
+      <div>
+        <h3 class="mb-5 font-sans text-[10px] uppercase tracking-[0.2em] text-bruno/40">
+          Esplora
+        </h3>
+        <ul class="flex flex-col gap-2.5">
+          {navLinks.map(({ label, href }) => (
+            <li>
+              <a
+                href={href}
+                class:list={[
+                  'font-sans transition-colors duration-200 hover:text-corallo',
+                  label.startsWith('↳')
+                    ? 'text-xs text-bruno/45 hover:text-corallo'
+                    : 'text-sm text-bruno/70',
+                ]}
+              >
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contatti -->
+      <div>
+        <h3 class="mb-5 font-sans text-[10px] uppercase tracking-[0.2em] text-bruno/40">
+          Contatti
+        </h3>
+        <address class="not-italic">
+          <ul class="flex flex-col gap-3">
+            <li class="font-sans text-sm leading-snug text-bruno/65">
+              Via IV Novembre n. 24<br />Cassano Magnago (VA)
+            </li>
+            <li>
+              <a
+                href="tel:+393471846458"
+                class="font-sans text-sm text-bruno/65 transition-colors duration-200 hover:text-corallo"
+              >
+                347 1846458
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:laurasaporiti72@gmail.com"
+                class="block font-sans text-sm text-bruno/65 transition-colors duration-200 hover:text-corallo"
+              >
+                laurasaporiti72@gmail.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:albertoponti05@gmail.com"
+                class="block font-sans text-sm text-bruno/65 transition-colors duration-200 hover:text-corallo"
+              >
+                albertoponti05@gmail.com
+              </a>
+            </li>
+            <li class="font-sans text-sm text-bruno/65">
+              Su appuntamento
+            </li>
+          </ul>
+        </address>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-14 flex flex-col items-start justify-between gap-4 border-t border-bruno/10 pt-8 md:flex-row md:items-center">
+      <p class="font-sans text-xs text-bruno/35">
+        © {new Date().getFullYear()} Officina Onirica. Tutti i diritti riservati.
+      </p>
+    </div>
+
+  </div>
+</footer>
