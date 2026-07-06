@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+---
+
+<BaseLayout
+  title={`${post.data.title} — Officina Onirica`}
+  description={post.data.description}
+>
+
+  <!-- ─── HERO ──────────────────────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden">
+    {post.data.image ? (
+      <img src={post.data.image} alt="" class="absolute inset-0 h-full w-full object-cover" />
+    ) : (
+      <div class="absolute inset-0 bg-salvia-chiaro/60"></div>
+    )}
+    <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/70 to-transparent"></div>
+    <div class="relative mx-auto max-w-6xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
+      <time class="mb-3 block font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
+        {formatDate(post.data.date)}
+      </time>
+      <h1 class="font-display text-4xl font-semibold leading-tight text-bruno md:text-5xl lg:text-6xl">
+        {post.data.title}
+      </h1>
+    </div>
+  </section>
+
+  <!-- ─── CONTENUTO ─────────────────────────────────────────────────────────── -->
+  <article class="bg-azzurro py-16 md:py-24">
+    <div class="mx-auto max-w-2xl px-6">
+
+      <div class="
+        prose prose-bruno max-w-none
+        [&_h2]:font-display [&_h2]:text-3xl [&_h2]:font-semibold [&_h2]:text-bruno [&_h2]:mt-14 [&_h2]:mb-5
+        [&_p]:font-sans [&_p]:text-sm [&_p]:leading-relaxed [&_p]:text-bruno/70
+        [&_strong]:font-semibold [&_strong]:text-bruno
+      ">
+        <Content />
+      </div>
+
+      <!-- CTA finali -->
+      <div class="mt-16 flex flex-col gap-5 border-t border-bruno/10 pt-10 sm:flex-row sm:items-center sm:justify-between">
+        <a
+          href="/bacheca"
+          class="border-b border-corallo pb-0.5 font-sans text-sm text-corallo transition-all duration-200 hover:pb-1"
+        >
+          ← Torna alla bacheca
+        </a>
+        <a
+          href="/contatti"
+          class="inline-block bg-corallo px-6 py-3 font-sans text-sm font-semibold tracking-wide text-white transition-opacity duration-200 hover:opacity-85"
+        >
+          Scrivici
+        </a>
+      </div>
+
+    </div>
+  </article>
+
+</BaseLayout>

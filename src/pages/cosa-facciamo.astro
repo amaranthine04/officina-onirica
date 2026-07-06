@@ -1,10 +1,37 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const atelier = [
+  {
+    title: 'Atelier Creativi',
+    excerpt: 'Laboratori e workshop per stimolare la creatività, aperti a tutti. Brevi, intensi, accessibili.',
+    href: '/atelier-creativi',
+    bg: 'bg-cipria/20',
+    photoBg: 'bg-cipria/50',
+    photoLabel: 'PLACEHOLDER FOTO CREATIVI',
+  },
+  {
+    title: 'Atelier Terapeutici',
+    excerpt: 'Percorsi individuali e di gruppo per affrontare, elaborare e riequilibrare. Duraturi quanto serve.',
+    href: '/atelier-terapeutici',
+    bg: 'bg-salvia-chiaro/50',
+    photoBg: 'bg-salvia-chiaro',
+    photoLabel: 'PLACEHOLDER FOTO TERAPEUTICI',
+  },
+  {
+    title: 'Atelier Formativi',
+    excerpt: 'Formazione professionale in arte terapia per operatori, terapisti e professionisti del settore.',
+    href: '/atelier-formativi',
+    bg: 'bg-azzurro',
+    photoBg: 'bg-azzurro/60',
+    photoLabel: 'PLACEHOLDER FOTO FORMATIVI',
+  },
+];
 ---
 
 <BaseLayout
   title="Cosa facciamo — Officina Onirica"
-  description="Officina Onirica propone percorsi di arte terapia individuali e di gruppo per ogni fase della vita, e gruppi in collaborazione con le associazioni del territorio."
+  description="Officina Onirica propone atelier creativi, terapeutici e formativi. Arte terapia individuale e di gruppo a Cassano Magnago."
 >
 
   <!-- ─── HERO ──────────────────────────────────────────────────────────────── -->
@@ -20,7 +47,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Cosa facciamo
       </p>
       <h1 class="font-display text-4xl font-semibold leading-tight text-bruno md:text-5xl lg:text-6xl">
-        Percorsi e gruppi
+        I nostri atelier
       </h1>
     </div>
   </section>
@@ -29,51 +56,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="py-14 md:py-20">
     <div class="mx-auto max-w-6xl px-6">
 
-      <p class="mb-12 text-center font-sans text-base leading-relaxed text-bruno/70 md:text-lg">
-        Proponiamo <strong class="font-semibold text-bruno">percorsi individuali e di gruppo</strong> per bambini, adulti e anziani,
-        e <strong class="font-semibold text-bruno">gruppi specifici</strong> in collaborazione con le associazioni del territorio.
-        Ogni intervento è pensato per rispettare i tempi e la storia di ciascuno.
+      <p class="mb-14 text-center font-sans text-base leading-relaxed text-bruno/70 md:text-lg">
+        Proponiamo <strong class="font-semibold text-bruno">atelier creativi, terapeutici e formativi</strong>,
+        pensati per rispettare i tempi e la storia di ciascuno.
+        Ogni percorso nasce dall'incontro tra chi siamo e chi ci viene a trovare.
       </p>
 
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-
-        <!-- Percorsi -->
-        <a href="/percorsi" class="flex flex-col bg-cipria/20 transition-opacity duration-200 hover:opacity-90">
-          <div class="aspect-[4/3] w-full bg-cipria/50">
-            <div class="flex h-full w-full items-center justify-center">
-              <p class="font-sans text-xs text-bruno/30">[PLACEHOLDER FOTO PERCORSI]</p>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        {atelier.map(a => (
+          <a href={a.href} class={`flex flex-col ${a.bg} transition-opacity duration-200 hover:opacity-90`}>
+            <div class={`aspect-[4/3] w-full ${a.photoBg}`}>
+              <div class="flex h-full w-full items-center justify-center">
+                <p class="font-sans text-xs text-bruno/30">[{a.photoLabel}]</p>
+              </div>
             </div>
-          </div>
-          <div class="flex flex-1 flex-col p-8">
-            <h2 class="font-display mb-3 text-3xl font-semibold text-bruno">Percorsi</h2>
-            <p class="mb-8 flex-1 font-sans text-sm leading-relaxed text-bruno/65">
-              Percorsi individuali e di gruppo per bambini, adulti e anziani.
-            </p>
-            <span class="inline-block self-start border-b border-corallo pb-0.5 font-sans text-sm font-semibold text-corallo">
-              Scopri di più →
-            </span>
-          </div>
-        </a>
-
-        <!-- Gruppi -->
-        <a href="/gruppi" class="flex flex-col bg-salvia-chiaro/50 transition-opacity duration-200 hover:opacity-90">
-          <div class="aspect-[4/3] w-full bg-salvia-chiaro">
-            <div class="flex h-full w-full items-center justify-center">
-              <p class="font-sans text-xs text-salvia/50">[PLACEHOLDER FOTO GRUPPI]</p>
+            <div class="flex flex-1 flex-col p-8">
+              <h2 class="font-display mb-3 text-3xl font-semibold text-bruno">{a.title}</h2>
+              <p class="mb-8 flex-1 font-sans text-sm leading-relaxed text-bruno/65">{a.excerpt}</p>
+              <span class="inline-block self-start border-b border-corallo pb-0.5 font-sans text-sm font-semibold text-corallo">
+                Scopri di più →
+              </span>
             </div>
-          </div>
-          <div class="flex flex-1 flex-col p-8">
-            <h2 class="font-display mb-3 text-3xl font-semibold text-bruno">Gruppi</h2>
-            <p class="mb-8 flex-1 font-sans text-sm leading-relaxed text-bruno/65">
-              Gruppi in collaborazione con le associazioni del territorio.
-            </p>
-            <span class="inline-block self-start border-b border-corallo pb-0.5 font-sans text-sm font-semibond text-corallo">
-              Scopri di più →
-            </span>
-          </div>
-        </a>
-
+          </a>
+        ))}
       </div>
+
     </div>
   </section>
 

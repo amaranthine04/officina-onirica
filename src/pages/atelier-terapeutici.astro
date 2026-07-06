@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<BaseLayout
+  title="Atelier Terapeutici — Officina Onirica"
+  description="Percorsi individuali e di gruppo di arte terapia a Cassano Magnago. Officina Onirica lavora con bambini, adulti, anziani e in collaborazione con enti del territorio."
+>
+
+  <!-- ─── HERO ──────────────────────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-salvia-chiaro">
+      <div class="flex h-full w-full items-center justify-center">
+        <p class="font-sans text-sm text-salvia/50">[PLACEHOLDER FOTO TERAPEUTICI]</p>
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/70 to-transparent"></div>
+    <div class="relative mx-auto max-w-6xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
+      <p class="mb-3 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
+        Atelier Terapeutici
+      </p>
+      <h1 class="font-display text-4xl font-semibold leading-tight text-bruno md:text-5xl lg:text-6xl">
+        Percorsi terapeutici
+      </h1>
+    </div>
+  </section>
+
+  <!-- ─── INTRO ─────────────────────────────────────────────────────────────── -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
+        <div>
+          <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Cosa sono</p>
+          <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
+            Arte terapia individuale e di gruppo
+          </h2>
+          <div class="space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
+            <p>
+              Gli Atelier Terapeutici sono percorsi di arte terapia individuali o di gruppo,
+              pensati per affrontare, elaborare e riequilibrare disarmonie, disagi psichici e/o fisici.
+              <strong class="font-semibold text-bruno">Durano quanto necessario</strong> — fino a quando la persona sente di aver
+              raggiunto il proprio equilibrio.
+            </p>
+          </div>
+        </div>
+
+        <!-- Foto: mobile dopo il testo, desktop a destra -->
+        <div class="aspect-[4/3] w-full bg-salvia-chiaro/70">
+          <div class="flex h-full w-full items-center justify-center">
+            <p class="font-sans text-xs text-salvia/40">[PLACEHOLDER FOTO]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── COME FUNZIONA ─────────────────────────────────────────────────────── -->
+  <section class="bg-salvia-chiaro/40 py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
+        <div>
+          <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Il percorso</p>
+          <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
+            Come funziona
+          </h2>
+          <div class="space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
+            <p>
+              L'arte terapia facilita l'espressione di sogni, fantasie ed esperienze interiori
+              attraverso il linguaggio delle arti visive, in un ambiente sicuro e accogliente.
+              I percorsi possono essere <strong class="font-semibold text-bruno">individuali o di gruppo</strong>, e si adattano alle
+              esigenze specifiche di ciascuna persona.
+            </p>
+            <p>
+              Non esiste una durata prefissata: ogni percorso è unico e continua finché la persona
+              lo sente necessario. Gli interventi consentono di affrontare, elaborare e riequilibrare
+              disarmonie, <strong class="font-semibold text-bruno">sciogliere blocchi emotivi</strong> e sviluppare nuove capacità
+              espressive e relazionali.
+            </p>
+          </div>
+        </div>
+
+        <!-- Foto: mobile dopo il testo, desktop a destra -->
+        <div class="order-last aspect-[4/3] w-full bg-salvia-chiaro md:order-last">
+          <div class="flex h-full w-full items-center justify-center">
+            <p class="font-sans text-xs text-salvia/40">[PLACEHOLDER FOTO SESSIONE]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── A CHI SI RIVOLGE ──────────────────────────────────────────────────── -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
+
+        <div class="aspect-[4/3] w-full bg-salvia-chiaro/70 order-last md:order-first">
+          <div class="flex h-full w-full items-center justify-center">
+            <p class="font-sans text-xs text-salvia/40">[PLACEHOLDER FOTO PARTECIPANTI]</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Partecipanti</p>
+          <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
+            A chi si rivolge
+          </h2>
+          <div class="space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
+            <p>
+              A <strong class="font-semibold text-bruno">bambini, adulti e anziani</strong>, sia in condizioni di salute che in
+              presenza di disagio psichico e/o fisico. I percorsi terapeutici sono indicati per chi desidera
+              lavorare su di sé attraverso l'espressione artistica, in un contesto protetto e professionale.
+            </p>
+            <p>
+              In ambito clinico, l'arte terapia si inserisce in un approccio
+              <strong class="font-semibold text-bruno">multidisciplinare integrato</strong> alla rete dei servizi territoriali esistenti.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── DOVE SI SVOLGE ────────────────────────────────────────────────────── -->
+  <section class="bg-salvia-chiaro/40 py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6 text-center">
+      <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Sede</p>
+      <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
+        Dove si svolge
+      </h2>
+      <p class="text-center font-sans text-sm leading-relaxed text-bruno/70">
+        Gli Atelier Terapeutici si svolgono presso Officina Onirica, <a href="https://maps.google.com/maps?q=Via+IV+Novembre+24,+Cassano+Magnago+VA,+Italy" target="_blank" rel="noopener noreferrer" class="border-b border-corallo pb-0.5 text-corallo transition-all duration-200 hover:pb-1">Via IV Novembre 24, Cassano Magnago (VA)</a>, in sessioni individuali o di gruppo. Per alcune collaborazioni
+        con centri e associazioni del territorio, gli interventi possono svolgersi anche
+        presso le strutture partner.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── COLLABORAZIONI ────────────────────────────────────────────────────── -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Territorio</p>
+      <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
+        Con chi collaboriamo
+      </h2>
+      <div class="max-w-2xl space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
+        <p>
+          Collaboriamo con associazioni e centri che supportano persone con autismo e
+          sindrome di Down, tra cui:
+        </p>
+        <ul class="space-y-2 pl-4">
+          <li class="relative pl-4 before:absolute before:left-0 before:top-2.5 before:h-1 before:w-1 before:rounded-full before:bg-corallo">
+            <strong class="font-semibold text-bruno">Associazione Più di 21</strong>
+          </li>
+          <li class="relative pl-4 before:absolute before:left-0 before:top-2.5 before:h-1 before:w-1 before:rounded-full before:bg-corallo">
+            <strong class="font-semibold text-bruno">Istituto La Provvidenza</strong> di Busto Arsizio — Padiglione Monsignore Galimberti
+          </li>
+          <li class="relative pl-4 before:absolute before:left-0 before:top-2.5 before:h-1 before:w-1 before:rounded-full before:bg-corallo">
+            <strong class="font-semibold text-bruno">Aliblu</strong> di Marnate
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FORM ──────────────────────────────────────────────────────────────── -->
+  <section class="bg-salvia-chiaro/40 py-14 md:py-20">
+    <div class="mx-auto max-w-3xl px-6">
+      <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Contatti</p>
+      <h2 class="font-display mb-3 text-3xl font-semibold text-bruno md:text-4xl">
+        Chiedi informazioni
+      </h2>
+      <p class="mb-10 font-sans text-sm leading-relaxed text-bruno/65">
+        Vuoi sapere di più sugli Atelier Terapeutici o iniziare un percorso? Scrivici.
+      </p>
+      <ContactForm subject="Atelier Terapeutici" />
+    </div>
+  </section>
+
+</BaseLayout>

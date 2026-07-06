@@ -44,7 +44,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- ─── 2. ARTE TERAPIA ──────────────────────────────────────────────────── -->
-  <section class="bg-cipria/30 py-16 md:py-24">
+  <section class="bg-azzurro py-16 md:py-24">
     <div class="mx-auto max-w-5xl px-6 text-center">
       <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
         A cosa serve e a chi si rivolge?
@@ -67,7 +67,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </p>
       </div>
       <a
-        href="/cos-e-arte-terapia"
+        href="/bacheca/cos-e-arte-terapia"
         class="mt-7 inline-block border-b border-corallo pb-0.5 font-sans text-sm text-corallo transition-all duration-200 hover:pb-1"
       >
         Scopri di più sull'arte terapia →
@@ -89,42 +89,55 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </p>
       </div>
 
-      <!-- Due card -->
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-        <a href="/percorsi" class="flex flex-col bg-salvia-chiaro/50 transition-opacity duration-200 hover:opacity-90">
-          <div class="aspect-[4/3] w-full overflow-hidden bg-salvia-chiaro">
+      <!-- Tre card -->
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <a href="/atelier-creativi" class="flex flex-col bg-cipria/20 transition-opacity duration-200 hover:opacity-90">
+          <div class="aspect-[4/3] w-full overflow-hidden bg-cipria/50">
             <div class="flex h-full w-full items-center justify-center">
-              <p class="font-sans text-sm text-salvia/60">[PLACEHOLDER FOTO PERCORSI]</p>
+              <p class="font-sans text-sm text-bruno/30">[PLACEHOLDER FOTO CREATIVI]</p>
             </div>
           </div>
           <div class="flex flex-1 flex-col p-6">
-            <h3 class="font-display mb-2 text-3xl font-semibold text-bruno">Percorsi</h3>
+            <h3 class="font-display mb-2 text-3xl font-semibold text-bruno">Atelier Creativi</h3>
             <p class="mb-6 flex-1 font-sans text-sm leading-relaxed text-bruno/65">
-              Per bambini, adulti e anziani, permettono di dar forma espressiva ai
-              contenuti del complesso universo interno unico in ciascuno, attraverso
-              le molteplici forme artistiche.
+              Laboratori e workshop per stimolare la creatività, aperti a tutti.
             </p>
             <span class="inline-block self-start border-b border-corallo pb-0.5 font-sans text-sm font-semibold text-corallo">
-              Scopri i percorsi →
+              Scopri →
             </span>
           </div>
         </a>
 
-        <a href="/gruppi" class="flex flex-col bg-cipria/30 transition-opacity duration-200 hover:opacity-90">
-          <div class="aspect-[4/3] w-full overflow-hidden bg-cipria/60">
+        <a href="/atelier-terapeutici" class="flex flex-col bg-salvia-chiaro/50 transition-opacity duration-200 hover:opacity-90">
+          <div class="aspect-[4/3] w-full overflow-hidden bg-salvia-chiaro">
             <div class="flex h-full w-full items-center justify-center">
-              <p class="font-sans text-sm text-bruno/30">[PLACEHOLDER FOTO GRUPPI]</p>
+              <p class="font-sans text-sm text-salvia/60">[PLACEHOLDER FOTO TERAPEUTICI]</p>
             </div>
           </div>
           <div class="flex flex-1 flex-col p-6">
-            <h3 class="font-display mb-2 text-3xl font-semibold text-bruno">Gruppi</h3>
+            <h3 class="font-display mb-2 text-3xl font-semibold text-bruno">Atelier Terapeutici</h3>
             <p class="mb-6 flex-1 font-sans text-sm leading-relaxed text-bruno/65">
-              Gruppi di arte terapia per ragazzi con sindrome di Down e persone con
-              Parkinson, in collaborazione con le associazioni del territorio. Uno
-              spazio di espressione condivisa.
+              Percorsi individuali e di gruppo per affrontare, elaborare e riequilibrare.
             </p>
             <span class="inline-block self-start border-b border-corallo pb-0.5 font-sans text-sm font-semibold text-corallo">
-              Scopri i gruppi →
+              Scopri →
+            </span>
+          </div>
+        </a>
+
+        <a href="/atelier-formativi" class="flex flex-col bg-azzurro transition-opacity duration-200 hover:opacity-90">
+          <div class="aspect-[4/3] w-full overflow-hidden bg-azzurro/60">
+            <div class="flex h-full w-full items-center justify-center">
+              <p class="font-sans text-sm text-bruno/30">[PLACEHOLDER FOTO FORMATIVI]</p>
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="font-display mb-2 text-3xl font-semibold text-bruno">Atelier Formativi</h3>
+            <p class="mb-6 flex-1 font-sans text-sm leading-relaxed text-bruno/65">
+              Formazione professionale in arte terapia per operatori e professionisti.
+            </p>
+            <span class="inline-block self-start border-b border-corallo pb-0.5 font-sans text-sm font-semibold text-corallo">
+              Scopri →
             </span>
           </div>
         </a>

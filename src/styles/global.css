@@ -13,16 +13,16 @@
   --color-corallo: #E8927C;
   --color-salvia-chiaro: #E4ECE8;
   --color-salvia: #9CC0B8;
+  --color-azzurro: #E8F4F6;
   --color-senape: #E8C170;
   --color-bruno: #4A4039;
 
   --font-family-display: "Cormorant Garamond", Georgia, serif;
   --font-family-sans: "Montserrat", system-ui, sans-serif;
 
-  /* Porta text-sm a 16px e text-xs a 13px su tutto il sito */
-  --font-size-xs: 0.8125rem;
-  --font-size-sm: 1rem;
-  --font-size-base: 1.0625rem;
+  --text-xs: 0.8125rem;
+  --text-sm: 1.125rem;
+  --text-base: 1.125rem;
 }
 
 @layer base {
