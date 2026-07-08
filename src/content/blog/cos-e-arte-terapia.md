@@ -1,7 +1,7 @@
 ---
 title: "Cos'è l'arte terapia"
 date: 2026-07-06
-description: "Arte terapia: origini, riferimenti teorici ed efficacia. Scopri come funziona e a chi si rivolge."
+description: "Arte terapia: origini, riferimenti teorici ed efficacia. Scopri come funziona e a chi si rivolge l'arte terapia di Officina Onirica."
 ---
 
 ## Origini e diffusione
