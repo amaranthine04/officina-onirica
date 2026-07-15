@@ -9,9 +9,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- ─── 1. HERO ───────────────────────────────────────────────────────────── -->
   <section class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-salvia-chiaro">
-      <!-- Sostituire con: <img src="/hero.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" /> -->
-    </div>
+    <picture>
+      <source srcset="/images/hero-home.webp" type="image/webp" />
+      <img
+        src="/images/hero-home.jpg"
+        alt="L'atelier di Officina Onirica a Cassano Magnago, spazio luminoso con materiali creativi e camino rosso"
+        class="absolute inset-0 h-full w-full object-cover"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
     <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/70 to-transparent"></div>
 
     <div class="relative mx-auto w-full max-w-6xl px-6 pb-48 pt-20 md:pb-64 md:pt-28">
