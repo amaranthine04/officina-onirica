@@ -8,14 +8,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 >
 
   <!-- ─── HERO ──────────────────────────────────────────────────────────────── -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-salvia-chiaro/60">
-      <div class="flex h-full w-full items-center justify-center">
-        <p class="font-sans text-sm text-salvia/50">[PLACEHOLDER FOTO ATELIER]</p>
-      </div>
-    </div>
-    <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/70 to-transparent"></div>
-    <div class="relative mx-auto max-w-6xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
+  <section class="relative flex min-h-[360px] flex-col justify-end overflow-hidden md:min-h-[420px]">
+    <picture>
+      <source srcset="/images/hero-spazio.webp" type="image/webp" />
+      <img src="/images/hero-spazio.jpg" alt="L'atelier di Officina Onirica" class="absolute inset-0 h-full w-full object-cover" fetchpriority="high" decoding="async" />
+    </picture>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at bottom left, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.78) 45%, rgba(255,255,255,0.28) 65%, transparent 80%)"></div>
+    <div class="relative mx-auto w-full max-w-6xl px-6 pb-12 md:pb-16">
       <p class="mb-3 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
         Dentro l'Atelier
       </p>
