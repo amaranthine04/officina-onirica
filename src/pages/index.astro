@@ -194,10 +194,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <!-- Alberto — base -->
         <a href="/dentro-atelier#alberto" class="flex flex-col items-center gap-3 transition-opacity duration-200 hover:opacity-75">
-          <div class="h-36 w-36 overflow-hidden rounded-full bg-salvia/30 md:h-56 md:w-56">
-            <div class="flex h-full w-full items-center justify-center">
-              <span class="font-sans text-sm text-salvia/50">AP</span>
-            </div>
+          <div class="h-36 w-36 overflow-hidden rounded-full md:h-56 md:w-56">
+            <picture class="block h-full w-full">
+              <source srcset="/images/alberto-ponti.webp" type="image/webp" />
+              <img src="/images/alberto-ponti.jpg" alt="Alberto Ponti" class="h-full w-full object-cover object-top" loading="lazy" decoding="async" />
+            </picture>
           </div>
           <p class="font-sans text-sm font-bold text-bruno">Alberto Ponti</p>
           <p class="font-sans text-xs text-bruno/50">Arte Terapeuta</p>
@@ -205,10 +206,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <!-- Laura — sollevata -->
         <a href="/dentro-atelier#laura" class="mb-12 flex flex-col items-center gap-3 transition-opacity duration-200 hover:opacity-75">
-          <div class="h-36 w-36 overflow-hidden rounded-full bg-cipria/70 md:h-56 md:w-56">
-            <div class="flex h-full w-full items-center justify-center">
-              <span class="font-sans text-sm text-bruno/35">LS</span>
-            </div>
+          <div class="h-36 w-36 overflow-hidden rounded-full md:h-56 md:w-56">
+            <picture class="block h-full w-full">
+              <source srcset="/images/laura-saporiti.webp" type="image/webp" />
+              <img src="/images/laura-saporiti.jpg" alt="Laura Saporiti" class="h-full w-full object-cover object-top" loading="lazy" decoding="async" />
+            </picture>
           </div>
           <p class="font-sans text-sm font-bold text-bruno">Laura Saporiti</p>
           <p class="font-sans text-xs text-bruno/50">Arte Terapeuta</p>

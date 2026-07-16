@@ -52,10 +52,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="mx-auto max-w-6xl px-6">
       <div class="grid grid-cols-1 items-start gap-12 md:grid-cols-2 md:gap-20">
 
-        <div class="order-2 aspect-[3/4] w-full max-w-sm bg-cipria/50 md:sticky md:top-8 md:order-1">
-          <div class="flex h-full w-full items-center justify-center">
-            <p class="font-sans text-sm text-bruno/30">[PLACEHOLDER FOTO LAURA]</p>
-          </div>
+        <div class="order-2 relative aspect-[3/4] w-full max-w-sm overflow-hidden md:sticky md:top-8 md:order-1">
+          <picture class="block h-full w-full">
+            <source srcset="/images/laura-saporiti.webp" type="image/webp" />
+            <img src="/images/laura-saporiti.jpg" alt="Laura Saporiti, Arte Terapeuta" class="h-full w-full object-cover object-top" loading="lazy" decoding="async" />
+          </picture>
         </div>
 
         <div class="order-1 pt-2 md:order-2">
@@ -123,10 +124,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </div>
 
-        <div class="aspect-[3/4] w-full max-w-sm bg-salvia-chiaro/70 md:sticky md:top-8 md:order-last">
-          <div class="flex h-full w-full items-center justify-center">
-            <p class="font-sans text-sm text-salvia/50">[PLACEHOLDER FOTO ALBERTO]</p>
-          </div>
+        <div class="relative aspect-[3/4] w-full max-w-sm overflow-hidden md:sticky md:top-8 md:order-last">
+          <picture class="block h-full w-full">
+            <source srcset="/images/alberto-ponti.webp" type="image/webp" />
+            <img src="/images/alberto-ponti.jpg" alt="Alberto Ponti, Arte Terapeuta" class="h-full w-full object-cover object-top" loading="lazy" decoding="async" />
+          </picture>
         </div>
 
       </div>
