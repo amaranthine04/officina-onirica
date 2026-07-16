@@ -194,12 +194,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2 class="font-display mb-8 text-4xl font-semibold leading-tight text-bruno md:text-5xl">
         Dentro lo spazio
       </h2>
-      <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
-        {[1,2,3,4,5,6,7,8].map(i => (
-          <div class="aspect-square bg-salvia-chiaro/70">
-            <div class="flex h-full w-full items-center justify-center">
-              <p class="font-sans text-xs text-salvia/50">[foto {i}]</p>
-            </div>
+      <div class="grid grid-cols-2 gap-3 md:grid-cols-3">
+        {[
+          { src: 'officina-sala-camino', alt: 'Sala con camino di Officina Onirica' },
+          { src: 'officina-onirica-scala', alt: 'La scala dell\'atelier Officina Onirica' },
+          { src: 'officina-esterno', alt: 'Esterno di Officina Onirica' },
+          { src: 'officina-atelier-verde', alt: 'Atelier verde di Officina Onirica' },
+          { src: 'officina-roseto-esterno', alt: 'Il roseto esterno di Officina Onirica' },
+          { src: 'atelier-alto', alt: 'Vista dall\'alto dell\'atelier' },
+        ].map(({ src, alt }) => (
+          <div class="relative aspect-square overflow-hidden">
+            <picture class="block h-full w-full">
+              <source srcset={`/images/${src}.webp`} type="image/webp" />
+              <img src={`/images/${src}.jpg`} alt={alt} class="h-full w-full object-cover" loading="lazy" decoding="async" />
+            </picture>
           </div>
         ))}
       </div>

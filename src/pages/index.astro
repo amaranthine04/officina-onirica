@@ -159,11 +159,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </a>
         </div>
         <div class="grid grid-cols-3 gap-3 md:grid-cols-4">
-          {[1,2,3,4].map(i => (
-            <div class="aspect-square bg-salvia-chiaro/70">
-              <div class="flex h-full w-full items-center justify-center">
-                <p class="font-sans text-xs text-salvia/50">[foto {i}]</p>
-              </div>
+          {[
+            { src: 'officina-sala-camino', alt: 'Sala con camino di Officina Onirica' },
+            { src: 'officina-atelier-verde', alt: 'Atelier verde di Officina Onirica' },
+            { src: 'officina-roseto-esterno', alt: 'Il roseto esterno di Officina Onirica' },
+            { src: 'atelier-alto', alt: 'Vista dall\'alto dell\'atelier' },
+          ].map(({ src, alt }) => (
+            <div class="relative aspect-square overflow-hidden">
+              <picture class="block h-full w-full">
+                <source srcset={`/images/${src}.webp`} type="image/webp" />
+                <img src={`/images/${src}.jpg`} alt={alt} class="h-full w-full object-cover" loading="lazy" decoding="async" />
+              </picture>
             </div>
           ))}
         </div>
