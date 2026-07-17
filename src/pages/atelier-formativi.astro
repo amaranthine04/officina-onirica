@@ -9,14 +9,13 @@ import ContactForm from '../components/ContactForm.astro';
 >
 
   <!-- ─── HERO ──────────────────────────────────────────────────────────────── -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-azzurro/60">
-      <div class="flex h-full w-full items-center justify-center">
-        <p class="font-sans text-sm text-bruno/30">[PLACEHOLDER FOTO FORMATIVI]</p>
-      </div>
-    </div>
-    <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/70 to-transparent"></div>
-    <div class="relative mx-auto max-w-6xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
+  <section class="relative flex min-h-[360px] flex-col justify-end overflow-hidden md:min-h-[420px]">
+    <picture>
+      <source srcset="/images/hero-formativi.webp" type="image/webp" />
+      <img src="/images/hero-formativi.jpg" alt="Atelier Formativi — Officina Onirica" class="absolute inset-0 h-full w-full object-cover" fetchpriority="high" decoding="async" />
+    </picture>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at bottom left, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.78) 45%, rgba(255,255,255,0.28) 65%, transparent 80%)"></div>
+    <div class="relative mx-auto w-full max-w-6xl px-6 pb-12 md:pb-16">
       <p class="mb-3 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
         Atelier Formativi
       </p>
@@ -45,10 +44,11 @@ import ContactForm from '../components/ContactForm.astro';
         </div>
 
         <!-- Foto: mobile dopo il testo, desktop a destra -->
-        <div class="aspect-[4/3] w-full bg-azzurro/60">
-          <div class="flex h-full w-full items-center justify-center">
-            <p class="font-sans text-xs text-bruno/25">[PLACEHOLDER FOTO]</p>
-          </div>
+        <div class="relative aspect-[4/3] w-full overflow-hidden">
+          <picture class="block h-full w-full">
+            <source srcset="/images/atelier-alto.webp" type="image/webp" />
+            <img src="/images/atelier-alto.jpg" alt="Atelier Formativi — Officina Onirica" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+          </picture>
         </div>
       </div>
     </div>
@@ -56,29 +56,18 @@ import ContactForm from '../components/ContactForm.astro';
 
   <!-- ─── COME FUNZIONA ─────────────────────────────────────────────────────── -->
   <section class="bg-azzurro py-14 md:py-20">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
-        <div>
-          <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Il formato</p>
-          <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
-            Come funziona
-          </h2>
-          <div class="space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
-            <p>
-              I percorsi formativi si svolgono esclusivamente in presenza, presso l'atelier
-              di Officina Onirica. Ogni percorso è strutturato in base alle esigenze specifiche
-              del gruppo o del professionista, con un approccio <strong class="font-semibold text-bruno">pratico e orientato
-              all'applicazione concreta</strong> degli strumenti dell'arte terapia nel proprio contesto lavorativo.
-            </p>
-          </div>
-        </div>
-
-        <!-- Foto: mobile dopo il testo, desktop a destra -->
-        <div class="order-last aspect-[4/3] w-full bg-azzurro/40 md:order-last">
-          <div class="flex h-full w-full items-center justify-center">
-            <p class="font-sans text-xs text-bruno/25">[PLACEHOLDER FOTO FORMAZIONE]</p>
-          </div>
-        </div>
+    <div class="mx-auto max-w-6xl px-6 text-center">
+      <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Il formato</p>
+      <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
+        Come funziona
+      </h2>
+      <div class="mx-auto max-w-4xl space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
+        <p>
+          I percorsi formativi si svolgono esclusivamente in presenza, presso l'atelier
+          di Officina Onirica. Ogni percorso è strutturato in base alle esigenze specifiche
+          del gruppo o del professionista, con un approccio <strong class="font-semibold text-bruno">pratico e orientato
+          all'applicazione concreta</strong> degli strumenti dell'arte terapia nel proprio contesto lavorativo.
+        </p>
       </div>
     </div>
   </section>
@@ -88,10 +77,11 @@ import ContactForm from '../components/ContactForm.astro';
     <div class="mx-auto max-w-6xl px-6">
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
 
-        <div class="aspect-[4/3] w-full bg-azzurro/50 order-last md:order-first">
-          <div class="flex h-full w-full items-center justify-center">
-            <p class="font-sans text-xs text-bruno/25">[PLACEHOLDER FOTO DESTINATARI]</p>
-          </div>
+        <div class="relative aspect-[4/3] w-full overflow-hidden order-last md:order-first">
+          <picture class="block h-full w-full">
+            <source srcset="/images/insegnante-arte.webp" type="image/webp" />
+            <img src="/images/insegnante-arte.jpg" alt="A chi si rivolge — Atelier Formativi" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+          </picture>
         </div>
 
         <div class="flex flex-col justify-center">
@@ -119,12 +109,12 @@ import ContactForm from '../components/ContactForm.astro';
 
   <!-- ─── SUPERVISIONE ──────────────────────────────────────────────────────── -->
   <section class="bg-azzurro py-14 md:py-20">
-    <div class="mx-auto max-w-6xl px-6">
+    <div class="mx-auto max-w-6xl px-6 text-center">
       <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Per professionisti</p>
       <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
         Supervisione professionale
       </h2>
-      <div class="space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
+      <div class="mx-auto max-w-4xl space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
         <p>
           Alberto Ponti offre percorsi di <strong class="font-semibold text-bruno">supervisione professionale</strong> per
           arte terapeuti e professionisti che già utilizzano l'arte terapia nel proprio lavoro.

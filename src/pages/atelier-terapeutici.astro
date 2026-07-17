@@ -9,14 +9,13 @@ import ContactForm from '../components/ContactForm.astro';
 >
 
   <!-- ─── HERO ──────────────────────────────────────────────────────────────── -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-salvia-chiaro">
-      <div class="flex h-full w-full items-center justify-center">
-        <p class="font-sans text-sm text-salvia/50">[PLACEHOLDER FOTO TERAPEUTICI]</p>
-      </div>
-    </div>
-    <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/70 to-transparent"></div>
-    <div class="relative mx-auto max-w-6xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
+  <section class="relative flex min-h-[360px] flex-col justify-end overflow-hidden md:min-h-[420px]">
+    <picture>
+      <source srcset="/images/hero-percorsiterapeutici.webp" type="image/webp" />
+      <img src="/images/hero-percorsiterapeutici.jpg" alt="Percorsi terapeutici — Officina Onirica" class="absolute inset-0 h-full w-full object-cover" fetchpriority="high" decoding="async" />
+    </picture>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse at bottom left, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.78) 45%, rgba(255,255,255,0.28) 65%, transparent 80%)"></div>
+    <div class="relative mx-auto w-full max-w-6xl px-6 pb-12 md:pb-16">
       <p class="mb-3 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">
         Atelier Terapeutici
       </p>
@@ -33,7 +32,7 @@ import ContactForm from '../components/ContactForm.astro';
         <div>
           <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Cosa sono</p>
           <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
-            Arte terapia individuale e di gruppo
+            Arte terapia a scopo terapeutico
           </h2>
           <div class="space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
             <p>
@@ -46,10 +45,11 @@ import ContactForm from '../components/ContactForm.astro';
         </div>
 
         <!-- Foto: mobile dopo il testo, desktop a destra -->
-        <div class="aspect-[4/3] w-full bg-salvia-chiaro/70">
-          <div class="flex h-full w-full items-center justify-center">
-            <p class="font-sans text-xs text-salvia/40">[PLACEHOLDER FOTO]</p>
-          </div>
+        <div class="relative aspect-[4/3] w-full overflow-hidden">
+          <picture class="block h-full w-full">
+            <source srcset="/images/come-funziona.webp" type="image/webp" />
+            <img src="/images/come-funziona.jpg" alt="Arte terapia a scopo terapeutico" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+          </picture>
         </div>
       </div>
     </div>
@@ -57,35 +57,24 @@ import ContactForm from '../components/ContactForm.astro';
 
   <!-- ─── COME FUNZIONA ─────────────────────────────────────────────────────── -->
   <section class="bg-salvia-chiaro/40 py-14 md:py-20">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
-        <div>
-          <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Il percorso</p>
-          <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
-            Come funziona
-          </h2>
-          <div class="space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
-            <p>
-              L'arte terapia facilita l'espressione di sogni, fantasie ed esperienze interiori
-              attraverso il linguaggio delle arti visive, in un ambiente sicuro e accogliente.
-              I percorsi possono essere <strong class="font-semibold text-bruno">individuali o di gruppo</strong>, e si adattano alle
-              esigenze specifiche di ciascuna persona.
-            </p>
-            <p>
-              Non esiste una durata prefissata: ogni percorso è unico e continua finché la persona
-              lo sente necessario. Gli interventi consentono di affrontare, elaborare e riequilibrare
-              disarmonie, <strong class="font-semibold text-bruno">sciogliere blocchi emotivi</strong> e sviluppare nuove capacità
-              espressive e relazionali.
-            </p>
-          </div>
-        </div>
-
-        <!-- Foto: mobile dopo il testo, desktop a destra -->
-        <div class="order-last aspect-[4/3] w-full bg-salvia-chiaro md:order-last">
-          <div class="flex h-full w-full items-center justify-center">
-            <p class="font-sans text-xs text-salvia/40">[PLACEHOLDER FOTO SESSIONE]</p>
-          </div>
-        </div>
+    <div class="mx-auto max-w-6xl px-6 text-center">
+      <p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.25em] text-corallo">Il percorso</p>
+      <h2 class="font-display mb-6 text-3xl font-semibold text-bruno md:text-4xl">
+        Come funziona
+      </h2>
+      <div class="mx-auto max-w-4xl space-y-4 font-sans text-sm leading-relaxed text-bruno/70">
+        <p>
+          L'arte terapia facilita l'espressione di sogni, fantasie ed esperienze interiori
+          attraverso il linguaggio delle arti visive, in un ambiente sicuro e accogliente.
+          I percorsi possono essere <strong class="font-semibold text-bruno">individuali o di gruppo</strong>, e si adattano alle
+          esigenze specifiche di ciascuna persona.
+        </p>
+        <p>
+          Non esiste una durata prefissata: ogni percorso è unico e continua finché la persona
+          lo sente necessario. Gli interventi consentono di affrontare, elaborare e riequilibrare
+          disarmonie, <strong class="font-semibold text-bruno">sciogliere blocchi emotivi</strong> e sviluppare nuove capacità
+          espressive e relazionali.
+        </p>
       </div>
     </div>
   </section>
@@ -95,10 +84,11 @@ import ContactForm from '../components/ContactForm.astro';
     <div class="mx-auto max-w-6xl px-6">
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">
 
-        <div class="aspect-[4/3] w-full bg-salvia-chiaro/70 order-last md:order-first">
-          <div class="flex h-full w-full items-center justify-center">
-            <p class="font-sans text-xs text-salvia/40">[PLACEHOLDER FOTO PARTECIPANTI]</p>
-          </div>
+        <div class="relative aspect-[4/3] w-full overflow-hidden order-last md:order-first">
+          <picture class="block h-full w-full">
+            <source srcset="/images/progetto-pinocchio.webp" type="image/webp" />
+            <img src="/images/progetto-pinocchio.jpg" alt="A chi si rivolge — Atelier Terapeutici" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+          </picture>
         </div>
 
         <div class="flex flex-col justify-center">

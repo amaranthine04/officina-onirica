@@ -176,10 +176,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </div>
 
-        <div class="aspect-[3/4] w-full max-w-sm bg-salvia-chiaro/60 md:sticky md:top-8">
-          <div class="flex h-full w-full items-center justify-center">
-            <p class="font-sans text-sm text-salvia/50">[PLACEHOLDER FOTO ATELIER INTERNI]</p>
-          </div>
+        <div class="relative aspect-[3/4] w-full max-w-sm overflow-hidden md:sticky md:top-8">
+          <picture class="block h-full w-full">
+            <source srcset="/images/officina-sala-camino.webp" type="image/webp" />
+            <img src="/images/officina-sala-camino.jpg" alt="La sala con camino di Officina Onirica" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+          </picture>
         </div>
 
       </div>

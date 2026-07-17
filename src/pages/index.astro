@@ -99,10 +99,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <!-- Tre card -->
       <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
         <a href="/atelier-creativi" class="flex flex-col bg-cipria/20 transition-opacity duration-200 hover:opacity-90">
-          <div class="aspect-[4/3] w-full overflow-hidden bg-cipria/50">
-            <div class="flex h-full w-full items-center justify-center">
-              <p class="font-sans text-sm text-bruno/30">[PLACEHOLDER FOTO CREATIVI]</p>
-            </div>
+          <div class="relative aspect-[4/3] w-full overflow-hidden">
+            <picture class="block h-full w-full">
+              <source srcset="/images/hero-creativi.webp" type="image/webp" />
+              <img src="/images/hero-creativi.jpg" alt="Atelier Creativi" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+            </picture>
           </div>
           <div class="flex flex-1 flex-col p-6">
             <h3 class="font-display mb-2 text-3xl font-semibold text-bruno">Atelier Creativi</h3>
@@ -116,10 +117,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </a>
 
         <a href="/atelier-terapeutici" class="flex flex-col bg-salvia-chiaro/50 transition-opacity duration-200 hover:opacity-90">
-          <div class="aspect-[4/3] w-full overflow-hidden bg-salvia-chiaro">
-            <div class="flex h-full w-full items-center justify-center">
-              <p class="font-sans text-sm text-salvia/60">[PLACEHOLDER FOTO TERAPEUTICI]</p>
-            </div>
+          <div class="relative aspect-[4/3] w-full overflow-hidden">
+            <picture class="block h-full w-full">
+              <source srcset="/images/hero-percorsiterapeutici.webp" type="image/webp" />
+              <img src="/images/hero-percorsiterapeutici.jpg" alt="Atelier Terapeutici" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+            </picture>
           </div>
           <div class="flex flex-1 flex-col p-6">
             <h3 class="font-display mb-2 text-3xl font-semibold text-bruno">Atelier Terapeutici</h3>
@@ -133,10 +135,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </a>
 
         <a href="/atelier-formativi" class="flex flex-col bg-azzurro transition-opacity duration-200 hover:opacity-90">
-          <div class="aspect-[4/3] w-full overflow-hidden bg-azzurro/60">
-            <div class="flex h-full w-full items-center justify-center">
-              <p class="font-sans text-sm text-bruno/30">[PLACEHOLDER FOTO FORMATIVI]</p>
-            </div>
+          <div class="relative aspect-[4/3] w-full overflow-hidden">
+            <picture class="block h-full w-full">
+              <source srcset="/images/hero-formativi.webp" type="image/webp" />
+              <img src="/images/hero-formativi.jpg" alt="Atelier Formativi" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+            </picture>
           </div>
           <div class="flex flex-1 flex-col p-6">
             <h3 class="font-display mb-2 text-3xl font-semibold text-bruno">Atelier Formativi</h3>
